@@ -1,0 +1,416 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Netflix Sans', sans-serif;
+  background: linear-gradient(287.56deg, #481FEC 0%, #E21E1E 100%);
+}
+::-webkit-scrollbar{
+  width: 7px;
+  background-color: #111;
+}
+::-webkit-scrollbar-thumb{
+  background-color: white;
+  border-radius: 10px;
+}
+
+li, a,button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+#navbar
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+}
+
+.logo
+{
+  cursor: pointer;
+  width: 315px;
+}
+
+.nav__links {
+  list-style: none;
+  z-index: 10;
+}
+
+.nav__links li {
+
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 30px;
+
+}
+
+.nav__links li a:hover {
+  color: #E21E1E;
+  background: #481FEC;
+}
+
+.cta
+{
+  padding: 9px 25px;
+  background-color: #E21E1E;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.cta:hover{
+  background-color: #481FEC;
+  color: #E21E1E;
+}
+.headerText {
+  float: right;
+  display: flex;
+  width: 25%;
+  height: 600px;
+  flex-direction: column;
+}
+
+.headerText h1 {
+  color: #E21E1E;
+  font-size: 3.5em;
+  font-weight: bolder;
+  text-align: center;
+  padding: 40px 0;
+}
+.headerText img {
+  transform: rotateX(180deg);
+  padding-right: 10px;
+}
+
+#banner{
+  color: white;
+  width: 70%;
+  margin-top: 0px;
+  margin-left: 50px;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  background-position: center;
+}
+#banner__fadeBottom{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: radial-gradient(59.49% 115.14% at 0% 100%, #000000 0%, rgba(0, 0, 0, 0.3) 100%);
+  z-index:1;
+  border-radius: inherit;
+}
+#banner__contents{
+  position: absolute;
+  margin-left: 70px;
+  padding-top: 385px;
+  height: 190px;
+  z-index: 2;
+}
+#banner__title{
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+}
+#banner__description{
+  width: 45rem;
+  line-height: 1.5;
+  padding-top: 1rem;
+  font-size: .9rem;
+  max-width: 360px;
+  height: 80px;
+}
+#four{
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: .2vw;
+  padding-left: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: .5rem;
+  background-color: rgba(51,51,51,.5);
+  padding-bottom: .5rem;
+  z-index: 3;
+}
+#four:hover{
+  color: black;
+  background-color: #e6e6e6;
+  transition: all .3s;
+}
+#modal_fadeBottom{
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  max-height: 250px;
+  background: radial-gradient(59.49% 115.14% at 0% 100%, #000000 0%, rgba(0, 0, 0, 0.3) 100%);
+
+}
+
+
+
+html.modal-active, body.modal-active {
+  overflow: hidden;
+}
+
+#modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 3;
+}
+ 
+#modal-container.four {
+  z-index: 1;
+  transform: scale(1);
+}
+
+#modal-container.four .modal-background .modal {
+  animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.four + .content {
+  animation: blowUpContent 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.four.out .modal-background .modal {
+  animation: blowUpModalTwo 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container .modal-background .modal {
+  background:linear-gradient(287.56deg, #481FEC 0%, #E21E1E 100%);
+  padding: 50px;
+  display: inline-block;
+  height: 700px;
+  border-radius: 3px;
+  font-weight: 300;
+  position: relative;
+}
+#modal-container .modal-background .modal h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-container .modal-background .modal p {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@keyframes blowUpContent {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  99.9% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes blowUpContentTwo {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes blowUpModal {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes blowUpModalTwo {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.modal_row{
+  margin-left: 20px;
+  color: white;
+  z-index: 10;
+}
+.row__poster{
+  object-fit: contain;
+  width: 100%;
+  max-height: 120px;
+  margin-right: 10px;
+  transition: transform 500ms;
+  z-index: 10;
+}
+.row__posters::-webkit-scrollbar{
+  display: none;
+}
+.row__posters{
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+  z-index: 10;
+  
+}
+.row__title {
+  color: white;
+  padding-left: 10px;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+.row__poster:hover{
+  transform: scale(1.08);
+  filter: blur(5px);
+}
+.row__posterLarge, 
+.row__posterLarge1,
+.row__posterLarge2{
+  object-fit: contain;
+  width: 100%;
+  max-height: 250px;
+  margin-right: 10px;
+  transition: transform 500ms;
+  z-index: 10;
+
+}
+.row__posterLarge:hover,
+.row__posterLarge1:hover,
+.row__posterLarge2:hover{
+  transform: scale(1.09);
+  opacity: 1;
+  filter: blur(5px);
+
+}
+
+/* know more */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+.embed.hide{
+    display: none;
+}
+
+.embed.show{
+    display: inline-block;
+}
+
+.arrow{
+    position: absolute;
+    font-size: 40px;
+}
+
+.arrow.left-arrow{
+    top:50%;
+    left:5%;
+    transform: translateY(-50%);
+}
+
+
+.arrow.right-arrow{
+  top:50%;
+  transform: translateY(-50%);
+  right:5%;
+}
+
+.dots{
+  margin-top: 30px;
+}
+
+.dots .dot {
+  padding: 5px 15px;
+  border-radius: 50%;
+  border: 5px solid var(--secondary-color);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.dots .dot.active{
+  border-color: orange;
+}
