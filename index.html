@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>CodePen - Modal Animations</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./index.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="https://kit.fontawesome.com/7195b718c9.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -24,7 +25,7 @@
         </ul>
     </nav>
 
-    <a href="" class="cta">Contact</a>
+    <a href="https://linktr.ee/Vedantsharma" target="_blank" class="cta">Contact</a>
 
   </header>
   
@@ -34,62 +35,63 @@
   </div>
 
   <!-- banner -->
-  <header id="banner">
+  <div data-aos="zoom-out-down" id="banner">
     <div id="banner__fadeBottom"></div>
     <div id="banner__contents">
         <h1 id="banner__title"></h1>
       <p id="banner__description"></p>
       <div id="banner__buttons">
-        <button onclick="myFunction()" class="button" id="four">See more</button>
+        <button class="button" id="four"></button>
       </div>
     </div>
-  </header>
+  </div>
 
-<!-- partial:index.partial.html -->
-<div id="modal-container">
-  <div class="modal-background">
-    <div id="modalrow" class="modal">
-      <div class="modal_row">
-        <h2 id="modal_title"></h2>
-        <div class="modal_posters">
-          <div id="modal_fadeBottom"></div>
-          <p id="modal_movie_title"></p>
-          <div id="modal_fadeBottom"></div>
-        </div>
-        <div id="modal_fadeBottom"></div>
-      </div>
-    </div>
+<!-- content -->
+
+<div data-aos="fade-up" id="contents">
+  <div class="content">
+    <i class="fa-brands fa-cc-discover"></i>
+    <h1>Discover Content</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, consequatur nobis! Molestias, provident earum! Enim aliquid, pariatur modi voluptate impedit vero amet iusto eveniet adipisci ipsum numquam repellat explicabo atque?</p>
+  </div>
+  <div class="content">
+    <i class="fa-brands fa-uikit"></i>
+    <h1>Simple UI</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias recusandae quasi eius praesentium. Quo eveniet dolor necessitatibus, harum voluptas quasi quae ratione odit nobis rem rerum corporis ea facere animi.</p>
+  </div>
+  <div class="content">
+    <i class="fa-solid fa-couch"></i>
+    <h1>Free for all</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa explicabo, esse dolorum perspiciatis nulla molestias dolor dolores! Nesciunt delectus mollitia incidunt, ex, debitis officia placeat vitae reiciendis dignissimos, pariatur veniam.</p>
+  </div>
+  <div class="content">
+    <i class="fa-solid fa-ticket-simple"></i>
+    <h1>Always uptodate</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa explicabo, esse dolorum perspiciatis nulla molestias dolor dolores! Nesciunt delectus mollitia incidunt, ex, debitis officia placeat vitae reiciendis dignissimos, pariatur veniam.</p>
   </div>
 </div>
 
 <!-- row -->
-<div id="headrow">
+<div data-aos="fade-up" id="headrow">
   <div class="row">
     <h2 class="row__title"></h2>
     <div class="row__posters"></div>
   </div>
 </div>
 
-<!-- know more -->
-<div id="myNav" class="overlay">
-
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-  <!-- Overlay content -->
-  <div class="overlay-content" id="overlay-content"></div>
-  
-  <a href="javascript:void(0)" class="arrow left-arrow" id="left-arrow">&#8656;</a> 
-  
-  <a href="javascript:void(0)" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
-
-</div>
-
 <!-- partial -->
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./index.js"></script>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    document.getElementById("modal_title").innerHTML = setMovie.name;
+    AOS.init({
+      offset: 220,
+      delay: 0, 
+      duration: 600, 
+      easing: 'ease',
+    }
+
+    );
   </script>
 
 </body>
